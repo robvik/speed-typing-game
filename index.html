@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<!--
+    Robin Viktorsson
+    rovi1601
+    rovi1601@student.miun.se
+    2017-12-22
+-->
+
+<html>
+  <head>
+    <title>Speed Typing Test</title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+
+    <!-- The header (Image and title) -->
+    <header>
+      <img src="img/typing.png" alt="Typing...">
+      <label id="subHeader">Speed Typing Game</label>
+    </header>
+
+    <!-- Here starts the main section -->
+    <main>
+
+      <!-- The section#settings includes all setting-related elements -->
+      <section id="settings">
+
+        <!-- The section#languageSettings includes all language-related settings such as checkbox/radiobuttons -->
+        <section id="languageSettings">
+          <input type="checkbox" name="ignoreCase" id="ignoreCase" value="ignore_case">
+          <label for="ignoreCase">Ignore Case</label>
+          <form>
+            <input type="radio" name="language" id="svBtn" value="swedish" checked>
+            <label for="svBtn">Swedish</label>
+            <input type="radio" name="language" id="enBtn" value="english">
+            <label for="enBtn">English</label>
+          </form>
+        </section>
+
+        <!-- The section#textSettings includes the select-element and its label -->
+        <section id="textSettings">
+          <label for="selectedText">Choose text:</label>
+          <select id="selectedText"></select>
+        </section>
+      </section>
+
+      <!-- This section includes the textarea which the poem is presented  -->
+      <section>
+        <section id="textArea"></section>
+      </section>
+
+      <!-- This is the section which presents ongoing information about the game to the user
+           and controls to handle the game, such as time left of the current game, mistakes,
+           score, start- and stop-button and the input field for your typing -->
+      <section>
+        <p>Time left: <span id="time">60</span></p>
+        <p>Points: <span id="points">0</span> &nbsp;&nbsp; Mistakes: <span id="mistakes">0</span></p>
+        <p>Total score: <span id="score">0</span></p>
+        <button type="button" id="btnStart" class="green">
+          <img id="btnImage" src="img/startbtn.png" alt="Start- and stop-button"/>
+        </button>
+        <br/><br/>
+        <input type="text" name="textInput" id="inputTextField" placeholder="Type text here..."/>
+      </section>
+
+      <!-- This section#statistics contains data about your typing performances -->
+      <section id="statistics">
+
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <table>
+          <tr>
+            <td>Gross WPM:</td>
+            <td id="grossWPM">100</td>
+            <td>Accuracy:</td>
+            <td id="accuracy">100%</td>
+          </tr>
+          <tr>
+            <td>Net WPM:</td>
+            <td id="netWPM">100</td>
+            <td>Errors:</td>
+            <td id="errors">0</td>
+          </tr>
+        </table>
+
+      </section>
+
+    </main>
+
+    <!-- The footer includes information about copyright and contact details -->
+    <footer>
+      <hr/>
+      <p>Copyright @ 2017 Robin Viktorsson. No rights reserved.</p>
+      <a href="mailto:rovi1601@miun.se?Subject=About%20the%20speed%20typing%20game" target="_top">Contact me!</a>
+    </footer>
+  </body>
+</html>

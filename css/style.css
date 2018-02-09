@@ -1,0 +1,223 @@
+/*
+**  Fonts
+*/
+@font-face {
+    font-family: MyCustomFont;
+    src: url("../font/roboto-regular.ttf");
+    font-stretch: ultra-expanded;
+}
+
+@font-face {
+    font-family: MyCustomFont2;
+    src: url("../font/lato-regular.ttf");
+    font-stretch: ultra-expanded;
+}
+
+/*
+* Body related styling
+*/
+body {
+  font-family: "MyCustomFont",verdana,arial,sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  background-image: url("../img/background.png");
+}
+
+/**
+ *  Styling for the label in header
+ */
+header label {
+    display: block;
+    font-size: 32px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/**
+ * Settings related styling
+ * - Styles the font of the following texts: "Ignore Case", "Swedish", "English", "Choose text"
+ */
+#settings {
+    font-family: "MyCustomFont2",verdana,arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    line-height: 25px;
+}
+
+#languageSettings {
+    text-align: left;
+    flex-basis: 75%;
+}
+
+#textSettings {  flex-basis: 25%; }
+#textSettings label[for=selectedText] { display: block; }
+
+/**
+ *  Select-box related styling
+ *  - Changes the appearance of the select box. Example: Adds an image (arrow) as the drop-down symbol
+ */
+select {
+    background: url("../img/arrow.png") no-repeat 90% -5px;
+    background-color: white;
+    height: 25px;
+    width: 170px;
+    padding-left: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/**
+ *  Textarea related styling (The section which the poem is presented in)
+ */
+#textArea {
+    background-color: white;
+    margin-top: 25px;
+    min-width: 500px;
+    min-height: 200px;
+    border: 1px solid black;
+    padding: 7px;
+    text-align: left;
+    margin: 20px auto;
+}
+
+#textArea p {
+    font-size: 13px;
+    line-height: 145%;
+    letter-spacing: 0.5px;
+}
+
+#textArea h3, h5 { text-align: center; }
+
+/* These are used to set the color of the characters the user types and set background color on spaces */
+.green{color: green;}
+.red{color:red;}
+.greenBg{background-color: green;}
+.redBg{background-color: red;}
+
+/*
+ *  Sub-header animation
+ */
+#subHeader {
+    position: relative;
+    -webkit-animation: myMove 2.5s infinite; /* Safari 4.0 - 8.0 */
+    animation: myMove 2.5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myMove {
+    0%   {left: 0px;}
+    50%  {left: 50px;}
+    75% {left: -50px;}
+    100% {left: 0px;}
+}
+
+/* Standard syntax */
+@keyframes myMove {
+    0%   {left: 0px;}
+    50%  {left: 50px;}
+    75% {left: -50px;}
+    100% {left: 0px;}
+}
+
+/*
+ '  Cursor animation
+ */
+.blinkingCursor {
+    background-color: gray;
+    margin-left: 1px;
+    -webkit-animation: blink 1.5s linear 0s infinite;
+    -moz-animation: blink 1.5s linear 0s infinite;
+    -ms-animation: blink 1.5s linear 0s infinite;
+    -o-animation: blink 1.5s linear 0s infinite;
+}
+
+@-webkit-keyframes blink {
+    0%   { background: lightgray }
+    47%  { background: lightgray }
+    50%  { background: none }
+    97%  { background: none }
+    100% { background: lightgray }
+}
+
+@-moz-keyframes blink {
+    0%   { background: lightgray }
+    47%  { background: lightgray }
+    50%  { background: none }
+    97%  { background: none }
+    100% { background: lightgray }
+}
+
+@-ms-keyframes blink {
+    0%   { background: lightgray }
+    47%  { background: lightgray }
+    50%  { background: none }
+    97%  { background: none }
+    100% { background: lightgray }
+}
+
+@-o-keyframes blink {
+    0%   { background: lightgray }
+    47%  { background: lightgray }
+    50%  { background: none }
+    97%  { background: none }
+    100% { background: lightgray }
+}
+
+/**
+ *  Textfield (input) related styling
+ */
+input[type="text"] {
+    height: 25px;
+    width: 250px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align:center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+input[type="text"]::-webkit-input-placeholder { text-align: center; }
+input[type="text"]::-moz-placeholder { text-align: center; }
+input[type="text"]:focus::-webkit-input-placeholder { color:transparent; }
+input[type="text"]:focus:-moz-placeholder { color:transparent; }
+
+/**
+ *  Button related styling (Start- and stop-button)
+ */
+#btnStart {
+    border: none;
+    background: none;
+}
+
+#btnStart:focus{ outline: none; }
+
+/**
+ *  Statistics related styling
+ */
+#statistics {
+  margin-top: 30px;
+  display: flex;
+  font-size: 13px;
+}
+
+canvas {
+    margin-right: 35px;
+    background-color: white;
+    border:1px solid #000000;
+}
+
+table td {
+   text-align: left;
+   padding: 10px;
+}
+
+/*
+ *  Footer related styling
+ */
+footer { font-size: 12px; margin-top: 25px; }
+footer a { text-decoration: none; }
